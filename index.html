@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WW2 Idle: USA Rising</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-screen">
+        <header id="stats-bar">
+            <svg class="sp-icon" viewBox="0 0 24 24" fill="#ff0000"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <div class="stat-group">
+                <span id="sp-display">0</span>
+                <span class="label">Support Points</span>
+            </div>
+            <div id="sp-rate">+1 SP/sec</div>
+            
+            <!-- Global Progress Bar -->
+            <div id="progress-container">
+                <div class="label">LIBERATION PROGRESS</div>
+                <div id="progress-bg"><div id="progress-fill"></div></div>
+            </div>
+        </header>
+
+        <main id="command-center">
+            <section id="sidebar">
+                <h3>War Room Upgrades</h3>
+                <div id="upgrade-list">
+                    <button id="upgrade-bonds" class="action-btn">
+                        <span>WAR BONDS</span><br>
+                        <small>Cost: <span id="cost-bonds">10</span> SP</small>
+                    </button>
+                    <button id="upgrade-infantry" class="action-btn">
+                        <span>INFANTRY DIV.</span><br>
+                        <small>Cost: <span id="cost-infantry">50</span> SP</small>
+                    </button>
+                    <button id="upgrade-tanks" class="action-btn">
+                        <span>ARMORED DIV.</span><br>
+                        <small>Cost: <span id="cost-tanks">250</span> SP</small>
+                    </button>
+                </div>
+                <button id="reset-btn">RESET DATA</button>
+            </section>
+
+            <section id="visual-monitor">
+                <div class="crosshair-v"></div>
+                <div class="crosshair-h"></div>
+                <div id="radar-pulse"></div>
+                <div id="unit-visuals"></div>
+                <div id="event-toast" class="hidden"></div>
+            </section>
+
+            <section id="briefing-room">
+                <svg class="briefing-image" viewBox="0 0 24 24" fill="#ffffff"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+                <h3>Intelligence Briefing</h3>
+                <div id="question-box">
+                    <p id="question-text">Awaiting orders...</p>
+                    <div id="answers-container"></div>
+                    <button id="question-btn" class="intel-btn">Request Briefing</button>
+                </div>
+                <div id="log-window">
+                    <p>Log: War Room Initialized.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>  
+</body>
+</html>
